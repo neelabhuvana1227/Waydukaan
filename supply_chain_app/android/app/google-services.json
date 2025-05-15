@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "306071655231",
+    "project_id": "way-dukaan",
+    "storage_bucket": "way-dukaan.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:306071655231:android:9240627228294bc6f9b98a",
+        "android_client_info": {
+          "package_name": "com.waydukaan.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOfB3RSk_DscaQ1jzgWpqVsn-JGapDPHs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
