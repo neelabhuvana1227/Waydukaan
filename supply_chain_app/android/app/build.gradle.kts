@@ -22,7 +22,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.supply_chain_app"
-        minSdk = flutter.minSdkVersion
+        minSdk = 19
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName

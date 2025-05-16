@@ -1,28 +1,26 @@
 import 'package:flutter/material.dart';
 
-// 1. Define the Product class and products list above HomePage
+// Define the Product class and product list
 class Product {
   final String name;
   final double price;
-  final String image; // asset path
+  final String image;
 
   Product({required this.name, required this.price, required this.image});
 }
 
 final List<Product> products = [
   Product(name: "Airpods", price: 1159.99, image: "assets/image/Airpods.png"),
-  Product(name: "charger", price: 179.99, image: "assets/image/charger.png"),
-  Product(name: "headsets", price: 1229.99, image: "assets/image/headsets.png"),
-  Product(name: "ladies watch", price: 159.99, image: "assets/image/ladies watch.png"),
-  Product(name: "men watch", price: 169.99, image: "assets/image/men watch.png"),
-  // Add more products as needed
+  Product(name: "Charger", price: 179.99, image: "assets/image/charger.png"),
+  Product(name: "Headsets", price: 1229.99, image: "assets/image/headsets.png"),
+  Product(name: "Ladies Watch", price: 159.99, image: "assets/image/ladies watch.png"),
+  Product(name: "Men Watch", price: 169.99, image: "assets/image/men watch.png"),
 ];
 
-// 2. Your HomePage class
 class HomePage extends StatelessWidget {
   final String username;
 
-  const HomePage({Key? key, required this.username}) : super(key: key);
+  const HomePage({required this.username, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,10 +34,10 @@ class HomePage extends StatelessWidget {
         leading: Padding(
           padding: const EdgeInsets.only(left: 16),
           child: Row(
-            children: [
+            children: const [
               FlutterLogo(size: 32),
-              const SizedBox(width: 8),
-              const Text(
+              SizedBox(width: 8),
+              Text(
                 "Waydukaan",
                 style: TextStyle(
                   color: Colors.deepPurple,
@@ -74,16 +72,12 @@ class HomePage extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.person_outline, color: Colors.deepPurple),
             tooltip: 'Login',
-            onPressed: () {
-              Navigator.pushReplacementNamed(context, '/login');
-            },
+            onPressed: () => Navigator.pushReplacementNamed(context, '/login'),
           ),
           IconButton(
             icon: const Icon(Icons.shopping_cart_outlined, color: Colors.deepPurple),
             tooltip: 'Cart',
-            onPressed: () {
-              Navigator.pushNamed(context, '/cart');
-            },
+            onPressed: () => Navigator.pushNamed(context, '/cart'),
           ),
           const SizedBox(width: 8),
         ],
@@ -106,9 +100,9 @@ class HomePage extends StatelessWidget {
             child: const Center(child: Text("Category/Promotional Banner")),
           ),
           const SizedBox(height: 24),
-          Text(
+          const Text(
             "Popular Products",
-            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
           ),
           const SizedBox(height: 12),
           SizedBox(
@@ -161,7 +155,7 @@ class HomePage extends StatelessWidget {
                             IconButton(
                               icon: const Icon(Icons.add_circle, color: Colors.deepPurple),
                               onPressed: () {
-                                // Add to cart logic here //
+                                // Add to cart logic here
                               },
                               tooltip: 'Add to cart',
                             ),
@@ -179,7 +173,7 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 );
-              }
+              },
             ),
           ),
         ],
@@ -187,9 +181,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
-      
-
-            
-              
-                

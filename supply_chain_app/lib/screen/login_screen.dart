@@ -34,7 +34,7 @@ class LoginScreen extends StatelessWidget {
     Navigator.pushReplacementNamed(
       context,
       '/home',
-      arguments: username,
+      arguments: {'username': username},
     );
   }
 

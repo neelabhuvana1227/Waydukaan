@@ -44,13 +44,8 @@ class ProductList extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.shopping_cart),
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => CartScreen()), // Replace CartScreen with your cart screen widget
-              );
-        // Or if using named routes:
-        // Navigator.pushNamed(context, '/cart');
-      },
+              Navigator.pushNamed(context, '/cart');
+            },
       tooltip: 'Go to Cart',
           )
         ],
